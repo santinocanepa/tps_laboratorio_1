@@ -125,6 +125,6 @@ void cargaForzada(){
 			"\nc) Precio pagando con bitcoin : %f"
 			"\n d) Precio unitario: %.2f"
 			"\nLa diferencia de precio es : %.2f"
-			"\n",KILOMETROS, LATAM, precioDebitoLatam, precioCreditoLatam, precioBitcoinLatam, precioUnitarioLatam, AEROLINEAS, precioDebitoAerolineas, precioCreditoAerolineas, precioBitcoinAerolineas, precioUnitarioAerolineas, diferenciaPrecio);
+			"\n,latam",KILOMETROS, LATAM, precioDebitoLatam, precioCreditoLatam, precioBitcoinLatam, precioUnitarioLatam, AEROLINEAS, precioDebitoAerolineas, precioCreditoAerolineas, precioBitcoinAerolineas, precioUnitarioAerolineas, diferenciaPrecio);
 }
 
