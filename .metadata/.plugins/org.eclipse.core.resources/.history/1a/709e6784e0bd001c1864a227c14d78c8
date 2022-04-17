@@ -26,7 +26,7 @@ int main(void){
 	int opcionVuelos;
 	float aerolineas=0;
 	float latam=0;
-	float precioDebitoLatam=0;
+	float precioDebitoLatam;
 	float precioCreditoLatam;
 	float precioBitcoinLatam;
 	float precioUnitarioLatam;
@@ -35,7 +35,6 @@ int main(void){
 	float precioBitcoinAerolineas;
 	float precioUnitarioAerolineas;
 	float diferenciaPrecio;
-	int flag=0;
 
 	do{
 		opcion = utn_getNumero();//retorno guardado en opcion
@@ -81,7 +80,6 @@ int main(void){
 					precioBitcoinAerolineas = dividir(aerolineas, BTC);
 					precioUnitarioAerolineas = dividir(aerolineas, kilometros);
 					diferenciaPrecio = buscarDiferencia(latam, aerolineas);
-					flag=1;
 				}
 				else
 				{
@@ -89,10 +87,10 @@ int main(void){
 				}
 				break;
 			case 4://muestra de precios
-				if(latam!=0 && aerolineas!=0 && flag==1){
+				if(latam!=0 && aerolineas!=0){
 					printf("\nPrecio vuelo Latam:%.2f\n a) Precio con tarjeta de débito: %.2f\n b) Precio con tarjeta de crédito: %.2f\n c) Precio pagando con bitcoin : %f\n d) Precio unitario: %.2f\nPrecio vuelo Aerolíneas: %.2f\n a) Precio con tarjeta de débito: %.2f\n b) Precio con tarjeta de crédito: %.2f\n c) Precio pagando con bitcoin : %f\n d) Precio unitario: %.2f\nLa diferencia de precio es : %.2f\n",latam, precioDebitoLatam, precioCreditoLatam, precioBitcoinLatam, precioUnitarioLatam, aerolineas, precioDebitoAerolineas, precioCreditoAerolineas, precioBitcoinAerolineas, precioUnitarioAerolineas, diferenciaPrecio);
 				}
-				else
+				else if(precioDebitoLatam<0)
 				{
 					printf("\n no se ingresaron kilometros o precio en los vuelos\n");
 				}

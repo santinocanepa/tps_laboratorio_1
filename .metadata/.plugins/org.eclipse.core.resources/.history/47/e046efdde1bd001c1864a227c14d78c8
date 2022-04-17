@@ -92,7 +92,7 @@ int main(void){
 				if(latam!=0 && aerolineas!=0 && flag==1){
 					printf("\nPrecio vuelo Latam:%.2f\n a) Precio con tarjeta de débito: %.2f\n b) Precio con tarjeta de crédito: %.2f\n c) Precio pagando con bitcoin : %f\n d) Precio unitario: %.2f\nPrecio vuelo Aerolíneas: %.2f\n a) Precio con tarjeta de débito: %.2f\n b) Precio con tarjeta de crédito: %.2f\n c) Precio pagando con bitcoin : %f\n d) Precio unitario: %.2f\nLa diferencia de precio es : %.2f\n",latam, precioDebitoLatam, precioCreditoLatam, precioBitcoinLatam, precioUnitarioLatam, aerolineas, precioDebitoAerolineas, precioCreditoAerolineas, precioBitcoinAerolineas, precioUnitarioAerolineas, diferenciaPrecio);
 				}
-				else
+				else if(flag==0)
 				{
 					printf("\n no se ingresaron kilometros o precio en los vuelos\n");
 				}
